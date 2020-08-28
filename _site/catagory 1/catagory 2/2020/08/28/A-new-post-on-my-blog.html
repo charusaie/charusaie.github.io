@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>My new post :) | Math Learner</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="My new post :)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="&lt;!DOCTYPE html&gt; Some notes on DP-MERF Some notes on DP-MERF" />
+<meta property="og:description" content="&lt;!DOCTYPE html&gt; Some notes on DP-MERF Some notes on DP-MERF" />
+<link rel="canonical" href="http://localhost:4000/blog/catagory%201/catagory%202/2020/08/28/A-new-post-on-my-blog.html" />
+<meta property="og:url" content="http://localhost:4000/blog/catagory%201/catagory%202/2020/08/28/A-new-post-on-my-blog.html" />
+<meta property="og:site_name" content="Math Learner" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-28T00:00:00+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/blog/catagory%201/catagory%202/2020/08/28/A-new-post-on-my-blog.html","headline":"My new post :)","dateModified":"2020-08-28T00:00:00+02:00","datePublished":"2020-08-28T00:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/catagory%201/catagory%202/2020/08/28/A-new-post-on-my-blog.html"},"description":"&lt;!DOCTYPE html&gt; Some notes on DP-MERF Some notes on DP-MERF","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Math Learner" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Math Learner</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">My new post :)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-08-28T00:00:00+02:00" itemprop="datePublished">Aug 28, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>&lt;!DOCTYPE html&gt;</p>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Some notes on DP-MERF</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Some notes on DP-MERF</h1>
+</header>
+
+<h1 id="add-noise-to-the-high-dimensional-mean-embedding">Add noise to the high-dimensional mean embedding</h1>
+<p>Adding the Gaussian noise to privatize a vector has been done in the literature, and also is the core basis of privatization in DP-MERF. The idea is to add the noise to the empirical mean embedding once, and then using that privatized mean embedding to find MMD between the real data and generated data, and optimizing the generated data distribution based on that.</p>
+<p>However, the finite-dimensional feature map for a point and based on a characteristic kernel often (if not always) is not achievable. Hence, in DP-MERF, we use a Random Fourier Feature map for shift-invariant kernels. The dimension of those feature maps can be boundlessly large, and as we tend this dimension to the infinity we have a better perception of the data, since we acquisite more frequency amplitude of the data.</p>
+
+ <!-- more --> 
+<p>I show the use of such high-dimensional presentation of each point is not free-of-charge. To prove that, I show the amount of added noise to the mean embedding must be going large proportionately with the dimension of the feature map to privatize the mean embedding. Hence, the mean embedding which is bounded in each element is bearing a noise with variance directly proportional to that bound and the dimension of points feature maps.</p>
+<p>To begin with, here I recall the theorem about Gaussian mechanism.</p>
+<p>Suppose that, for a positive-definite matrix <span class="math inline">\(M\in \mathbb{R}^{d\times d}\)</span>, the family of vectors <span class="math inline">\(\{v_D: D\in {\cal D}\}\subset \mathbb{R}^d\)</span> satisfies <span class="math display">\[\begin{aligned}
+        \sup_{D\sim D&#39;}\|M^{-1/2} (v_D-v_{D&#39;})\|_2 \leq \Delta,
+         \end{aligned}\]</span> Then the randomized algorithm which, for the input database <span class="math inline">\(D\)</span> outputs <span class="math display">\[\begin{aligned}
+        \tilde{v_D} = v_D + \frac{\Delta}{\sqrt{\epsilon}} Z, \qquad \mathbf{Z}\sim {\cal N}_d (0, M),
+     \end{aligned}\]</span> achieves <span class="math inline">\((\alpha, \frac{\alpha\epsilon}{2})\)</span>-RDP.</p>
+<p>The above theorem has a particular property that the noise does not have anything to do with the dimension of the vector. As an instance, if we have <span class="math inline">\(M=I\)</span> and <span class="math inline">\(\Delta=1\)</span> (i.e., <span class="math inline">\(\sup_{D\sim D&#39;}\|(v_D-v_{D&#39;})\|\leq 1\)</span>), the mechanism must add a Gaussian noise to each element with variance <span class="math inline">\(\sigma^2 =\frac{1}{\epsilon}\)</span>. The second moment of the noise is also <span class="math inline">\(\mathbb{E}^{1/2}\big[\|\mathbf{Z}/\sqrt{\epsilon}\|^2\big]= \sqrt{\frac{d}{\epsilon}}\)</span> which could be highly larger than the second-norm sensitivity <span class="math inline">\(1\)</span>.</p>
+<p><span> Note that this is essentially what happens in DP-MERF and talk about the difference between norm-2 of the whole vector and each pairs and note that the general composition theorem doesn’t distinguish between these two settings. Finally, try to find a better composition theorem in your case or you compare DP-MERF mean embedding privatization with that of covariate shift paper.</span></p>
+<h2 id="title">title</h2>
+<h1 id="adding-noise-to-mmd">Adding noise to MMD</h1>
+<p>The DP-MERF algorithm uses MMD as the fundamental element to assimilate the distribution of the output of a generator and the real data. The reason we use MMD is the fact that we can bound the sensitivity of an empirical mean embedding over neighboring datasets. Hence, to privatize the MMD, one can find a finite-dimensional estimation of the empirical mean embedding and add the noise to that vector. This finite-dimensional estimation is obtained by finding the mean of Random Fourier Features of each samples.</p>
+<p>However, this approach is always considering some frequencies in the Fourier transform spectrum of the kernel. This approximation of those feature maps are not characteristic, as we have zeros (almost everywhere) in their Fourier transform.</p>
+<p>To solve this problem, in this note I show that is eligible to add noise to the unbiased/biased estimation of the MMD. To do so, I show the sensitivity of those estimations have efficient bounds.</p>
+<h2 id="unbiased-estimation">Unbiased estimation</h2>
+<p>As noted in <span class="citation" data-cites="kernel"></span>, the unbiased estimation of MMD can be obtained as <span class="math display">\[\begin{aligned}
+ {\rm MMD}_u^2 [{\cal F}, X, Y] = &amp;\frac{1}{m(m-1)}\sum_{i=1}^m\sum_{j\neq i} k(x_i, x_j) + \frac{1}{n(n-1)}\sum_{i=1}^n \sum_{j\neq i} k(y_i, y_j)\\&amp;-\frac{2}{mn}\sum_{i=1}^m \sum_{j=1}^n k(x_i, y_j).
+     \end{aligned}\]</span> Hence, if we have a neighboring dataset <span class="math inline">\(X&#39;\)</span> which does not have <span class="math inline">\(x_1\)</span>, and considering the kernel is shift-invariant, then <span class="math display">\[\begin{aligned}
+ {\rm MMD}_u^2 [{\cal F}, X, Y]-{\rm MMD}_u^2 [{\cal F}, X&#39;, Y] &amp;= \frac{2}{m(m-1)}\sum_{j=2}^m k(x_1, x_j) - \frac{2}{m n}\sum_{j=1}^n k(x_1, y_j)\\
+        &amp;\leq \frac{2}{m} k(0, 0).
+     \end{aligned}\]</span> The reason for the last inequality is that, using the fact that <span class="math inline">\(k(\cdot, \cdot)\)</span> can be represented as an inner product of feature maps of points, and by Cauchy-Schwartz inequality we have <span class="math display">\[\begin{aligned}
+        k(x, y)\leq \sqrt{k(x, x) k(y, y)}= k(0, 0),
+     \end{aligned}\]</span> where the equality is based on shift-invariance of <span class="math inline">\(k(\cdot, \cdot)\)</span>. As a result, every average of <span class="math inline">\(k(x, y)\)</span> over <span class="math inline">\(x\)</span>s and <span class="math inline">\(y\)</span>s are also less than this value.</p>
+<h2 id="biased-estimation">Biased estimation</h2>
+<p>Again, as noted in <span class="citation" data-cites="kernel"></span>, the biased estimation of MMD is as <span class="math display">\[\begin{aligned}
+ {\rm MMD}_b^2 [{\cal F}, X, Y] =  &amp;\frac{1}{m^2}\sum_{i=1}^m\sum_{j=1}^m k(x_i, x_j) + \frac{1}{n^2}\sum_{i=1}^n \sum_{j=1}^n k(y_i, y_j)\\&amp;-\frac{2}{mn}\sum_{i=1}^m \sum_{j=1}^n k(x_i, y_j).
+     \end{aligned}\]</span> Again, using simple calculation, for a neighboring dataset <span class="math inline">\(X&#39;\)</span> which does not have <span class="math inline">\(x_1\)</span>, and for shift-invariant kernels we have <span class="math display">\[\begin{aligned}
+ {\rm MMD}_b^2 [{\cal F}, X, Y]-{\rm MMD}_b^2 [{\cal F}, X&#39;, Y] \leq \big(\frac{1}{m^2}+\frac{2}{m}\big) k(0, 0).
+     \end{aligned}\]</span></p>
+<h2 id="problem">Problem</h2>
+<p>Using the above discussions, we can simply add noise to the MMD square. However, as we need to have access to different MMD’s (i.e., for different <span class="math inline">\(Y\)</span>s) in optimization steps, we should add noise to the MMD several times which is inefficient.</p>
+<h2 id="idea">Idea</h2>
+<p>The solution to the above problem is to add dependent noise to preserve the efficiency of the private method. The idea is to consider we have added noise to the infinite-dimensional mean embedding and observe the result of privatized MMD for different <span class="math inline">\(Y\)</span>s. Then see the dependence between the added noise, and finally simulate that noise for different observations.</p>
+<p>Formally, we know that if <span class="math inline">\(N(t)\)</span> is a Gaussian process in the RKHS space, then the biased privatized MMD is as <span class="math display">\[\begin{aligned}
+ {\rm MMD}_p^2[{\cal F}, X, Y] &amp;=\big\|\frac{1}{m}\sum k(x_i, \cdot)+N(\cdot)-\frac{1}{n}\sum_{j=1}^n k(y_j, \cdot)\big\|_^2 \\&amp;={\rm MMD}_b^2[{\cal F}, X, Y]+\|N(\cdot)\|_^2\\&amp;~~+2\big\langle N(\cdot), \frac{1}{m}\sum k(x_i, \cdot)-\frac{1}{n}\sum_{j=1}^n k(y_j, \cdot)\big\rangle_.
+     \end{aligned}\]</span> As we need to optimize the distribution of <span class="math inline">\(Y\)</span>, we neglect the second term and have <span class="math display">\[\begin{aligned}
+    \widehat{\rm MMD}_p^2[{\cal F}, X, Y] ={\rm MMD}_b^2[{\cal F}, X, Y]+2\big\langle N(\cdot), \frac{1}{m}\sum k(x_i, \cdot)-\frac{1}{n}\sum_{j=1}^n k(y_j, \cdot)\big\rangle_.
+     \end{aligned}\]</span> As a simple fact, if <span class="math inline">\(N(\cdot)\)</span> is a Gaussian process, the added noise to the biased estimation also should be multivariate Gaussian noise. More formally, one can see that <span class="math display">\[\begin{aligned}
+            \widehat{\rm MMD}_p^2[{\cal F}, X, Y] ={\rm MMD}_b^2[{\cal F}, X, Y]+\frac{2}{m}\sum_{i=1}^m N(x_i)-\frac{2}{n}\sum_{j=1}^n N(y_j).
+     \end{aligned}\]</span> <span> Check the added Gaussian noise to DP-MERF. It seems as the dimension of the approximation grows, the noise will be insanely large for the whole vector. Tend the dimension to infinity to find out that each element of the feature map tends to zero and also the one for the mean embedding. But still the noise you add has a unitary variance for each element.</span></p>
+</body>
+</html>
+
+  </div><a class="u-url" href="/blog/catagory%201/catagory%202/2020/08/28/A-new-post-on-my-blog.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Math Learner</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Math Learner</li><li><a class="u-email" href="mailto:mcharusaie@mpg.tuebingen.de">mcharusaie@mpg.tuebingen.de</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/charusaie"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">charusaie</span></a></li><li><a href="https://www.twitter.com/charusaie"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">charusaie</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Probably and approximately two-weekly expression of my ideas on math and ML.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
