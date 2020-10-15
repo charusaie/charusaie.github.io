@@ -1,14 +1,27 @@
 var papers = [
   {
-    authors: "M. Charusaie, S. Rini, A. Amini",
-    title: "On the Compressibility of Affinely Singular Random Vectors",
+    authors: "M. Charusaie, A. Amini, S. Rini",
+    title: "Compressibility Measures of Affinely Singular Random Vectors",
     pdfurl: "https://arxiv.org/abs/2001.03884",
     where: "ArXiv Preprint, 2020",
-	abs: "There are several ways to measure the compressibility of a random measure; they include the general rate-distortion curve, as well as more specific notions such as Renyi information dimension (RID), and dimensional-rate bias (DRB). The RID parameter indicates the concentration of the measure around lower dimensional subsets of the space while the DRB parameter specifies the compressibility of the distribution over these lower dimensional subsets. While the evaluation of such compressibility parameters are well-studied for continuous and discrete measures (e.g., the DRB is closely related to the entropy and differential entropy in discrete and continuous cases, respectively), the case of discrete-continuous measures is quite subtle. In this paper, we focus on a class of multi-dimensional random measures that have singularities on affine lower dimensional subsets. These cases are of interest when working with linear transformation of component-wise independent discrete-continuous random variables. Here, we evaluate the RID and DRB for such probability measures. We further provide an upper-bound for the RID of multi-dimensional random measures that are obtained by Lipschitz functions of component-wise independent discretecontinuous random variables (x). The upper-bound is shown to be achievable when the Lipschitz function is Ax, where A satisfies spark(A) = rank(A)+1 (e.g., Vandermonde matrices). The above results in the case of discrete-domain moving-average processes with non-Gaussian excitation noise allow us to evaluate the blockaverage RID and to find a relationship between this parameter and other existing compressibility measures",
+	abs: "There are several ways to measure the compressibility of a random measure; they include general approaches, such as using the rate-distortion curve, as well as more specific notions, such as the Renyi information dimension (RID), and dimensional-rate bias (DRB). The RID parameter indicates the concentration of the measure around lower-dimensional subsets of the space while the DRB parameter specifies the compressibility of the distribution over these lower-dimensional subsets. While the evaluation of such compressibility parameters is well-studied for continuous and discrete measures (e.g., the DRB is closely related to the entropy and differential entropy in discrete and continuous cases, respectively), the case of discrete-continuous measures is quite subtle. In this paper, we focus on a class of multi-dimensional random measures that have singularities on affine lower-dimensional subsets. This class of distributions naturally arises when considering linear transformation of component-wise independent discrete-continuous random variables. Here, we evaluate the RID and DRB for such probability measures. We further provide an upper-bound for the RID of multi-dimensional random measures that are obtained by Lipschitz functions of component-wise independent discrete-continuous random variables (X). The upper-bound is shown to be achievable when the Lipschitz function is AX, where A satisfies SPARK(A) = rank(A) + 1 (e.g., Vandermonde matrices). When considering discrete-domain moving-average processes with non-Gaussian excitation noise, the above results allow us to evaluate the block-average RID and DRB, as well as to determine a relationship between these parameters and other existing compressibility measures. ",
     links: [
       {
         name: "arXiv",
         url: "https://arxiv.org/abs/2001.03884"
+      }
+    ]
+  },
+  {
+    authors: "M. Charusaie, S. Rini, A. Amini",
+    title: "On the Compressibility of Affinely Singular Random Vectors",
+    pdfurl: "https://ieeexplore.ieee.org/document/9174417",
+    where: "International Symposium on Information Theory, 21-26 June 2020",
+	abs: "The Renyi's information dimension (RID) of an n-dimensional random vector (RV) is the average dimension of the vector when accounting for non-zero probability measures over lower-dimensional subsets. From an information-theoretical perspective, the RID can be interpreted as a measure of compressibility of a probability distribution. While the RID for continuous and discrete measures is well understood, the case of a discrete-continuous measures presents a number of interesting subtleties. In this paper, we investigate the RID for a class of multi-dimensional discrete-continuous random measures with singularities on affine lower dimensional subsets. This class of RVs, which we term affinely singular, arises from linear transformation of orthogonally singular RVs, that include RVs with singularities on affine subsets parallel to principal axes. We obtain the RID of affinely singular RVs and derive an upper bound for the RID of Lipschitz functions of orthogonally singular RVs. As an application of our results, we consider the example of a moving-average stochastic process with discrete-continuous excitation noise and obtain the RID for samples of this process. We also provide insight about the relationship between the block-average information dimension of the truncated samples, the minimum achievable compression rate, and other measures of compressibility for this process.",
+    links: [
+      {
+        name: "IEEE",
+        url: "https://ieeexplore.ieee.org/document/9174417"
       }
     ]
   },
