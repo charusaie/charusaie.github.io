@@ -9,6 +9,62 @@
     <link href="default.css" rel="stylesheet" type="text/css" />
     <script src="papers.js" type="text/javascript"></script>
     <script src="default.js" type="text/javascript"></script>
+ <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+            
+            "@id": "#issue",
+            "@type": "PublicationIssue",
+            "datePublished": "2020",
+            "isPartOf": {
+                "@id": "#periodical",
+                "@type": [
+                    "PublicationVolume"
+                ],
+                "name": "2020 IEEE International Symposium on Information Theory (ISIT)",
+                "issn": [
+                    "2157-8117",
+                    "2157-8095"
+                ],
+                 "isbb": "978-1-7281-6432-8",
+                "publisher": "IEEE"
+            }
+        },
+        {
+            "@type": "ScholarlyArticle",
+            "isPartOf": {"@type": "PublicationIssue",
+            "datePublished": "2020", 
+                         "isPartOf": {
+                          "@type": [
+                              "PublicationVolume"
+                          ],
+                          "name": "2020 IEEE International Symposium on Information Theory (ISIT)",
+                          "issn": [
+                              "2157-8117",
+                              "2157-8095"
+                          ],
+                           "isbb": "978-1-7281-6432-8",
+                          "publisher": "IEEE"
+            }},
+            "description": "The Renyi's information dimension (RID) of an n-dimensional random vector (RV) is the average dimension of the vector when accounting for non-zero probability measures over lower-dimensional subsets. From an information-theoretical perspective, the RID can be interpreted as a measure of compressibility of a probability distribution. While the RID for continuous and discrete measures is well understood, the case of a discrete-continuous measures presents a number of interesting subtleties. In this paper, we investigate the RID for a class of multi-dimensional discrete-continuous random measures with singularities on affine lower dimensional subsets. This class of RVs, which we term affinely singular, arises from linear transformation of orthogonally singular RVs, that include RVs with singularities on affine subsets parallel to principal axes. We obtain the RID of affinely singular RVs and derive an upper bound for the RID of Lipschitz functions of orthogonally singular RVs. As an application of our results, we consider the example of a moving-average stochastic process with discrete-continuous excitation noise and obtain the RID for samples of this process. We also provide insight about the relationship between the block-average information dimension of the truncated samples, the minimum achievable compression rate, and other measures of compressibility for this process.",
+            "sameAs": "https://doi.org/10.1109/ISIT44484.2020.9174417",
+            "about": [
+                "Compression",
+                "Singularity"
+            ],
+            "pageEnd": "2240",
+            "pageStart": "2245",
+            "name": "On the Compressibility of Affinely Singular Random Vectors",
+            "author": {
+                    "@type": "Person",
+                    "name": "Mohammad-Amin Charusaie"
+                  }
+        }
+      ]
+    }
+    </script>
 </head>
 <!-- Random Header and Quote -->
 
