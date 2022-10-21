@@ -51,19 +51,6 @@ var papers = [
       }
     ]
   },
-    {
-    authors: "M. Charusaie, A. Amini, A. Gohari",
-    title: "Correlation Measures for Random Variables Derived from Innovation Processes",
-    pdfurl: "",
-    where: "(To be submitted)",
-	abs: "Studying the statistical dependence of two or several random variables is the basis of statistical estimation and prediction. The correlation measures such as mutual information, Pearson correlation, and maximal correlation are common tools in quantifying the extent to which two random variables are dependent. While such measures are highly informative and computationally simple for jointly Gaussian random variables, it is not the case for general random variables. Infinitely divisible random variables are typical examples that are characterized in the Fourier domain (characteristic functions are known); except for a few special cases, no closed-form expressions are available for the probability density function of such random variables. Besides, these random variables are widely used in the framework of sparse stochastic processes; the latter provides a general statistical formulation for continuous-domain linear models. In this paper, we introduce two new correlation measures tailored for infinitely divisible random variables with symmetric distribution. For the introduced measures, we prove a number of desired properties that are expected from a useful correlation measure. Finally, we employ these measures in an estimation problem; more specifically, we consider the interpolation problem for the family of Levy processes, and compare the outcome with ´ the known results in the literature.",
-    links: [
-/*       {
-        name: "arXiv",
-        url: "https://arxiv.org/abs/2001.03884"
-      } */
-    ]
-  },
 /*   {
     authors: "B. Balle, J. Bell, A. Gascon, and K. Nissim",
     title: "Differentially Private Summation with Multi-Message Shuffling",
