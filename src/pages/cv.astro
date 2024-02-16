@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    I'm originally from a <a href="https://maps.app.goo.gl/ie8brDbjtpwyzLgW9" class="na">small town</a>
+        in the west coast of Persian golf in Iran, where I lived my childhood years.
+        I moved to Isfahan and Tehran next, bigger cities in Iran to do my bachelor and master
+        studies. I have been living in Germany since 2020 and I'm pursuing my
+        PhD in computer science in <a href="https://maps.app.goo.gl/htoBRP5nw3Y7zDtU7" class="na">Tübingen</a>.
+        Living in different parts of Iran and now in Germany has given me the
+        chance to know people from different backgrounds and further provided me
+        with the chance to learn new languages. Besides my <a href="https://de.wikipedia.org/wiki/Bandari" class="na">dialect</a>
+        and Persian, I speak English, German, and an Iranian dialect of Kurdish.
+        <br />
+        Besides my academic career, I had a chance to work in electronic
+        industry in Iran, where I developed products for sales points.
+
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+    title="PhD in Computer Science"
+    subtitle="2020 to now at Max-Planck-Institute for Intelligent Systems, Tuebingen, Germany"
+  />
+    <TimeLineElement
+      title="Master's in Communication Systems"
+      subtitle="2016 to 2019 at Sharif University of Technology, Tehran, Iran"
+    />
+    <TimeLineElement
+      title="Bachelor's in Electrical Engineering - Communication Systems"
+      subtitle="2011 to 2016 at Isfahan University of Technology, Isfahan, Iran"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Research Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Researcher at Human aspects of Machine Learning Lab."
+      subtitle="From 2021 to now at MPI-IS, Tuebingen, Germany"
+    >
+      Here, I worked on understanding and further extensions of learn-to-defer systems.
+      I designed active learning methods of learning the deferral systems, introduced
+      a set of surrogate losses with which one could jointly train a classifier and rejection function,
+      extended the notion of learn-to-defer to a more general teaming setting, and worked towards
+      formalizing solution to deferral systems under constraints.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Researcher at Privacy-Preserving Machine Learning Lab."
+      subtitle="From 2020 to 2021 at MPI-IS, Tuebingen, Germany"
+    >
+      Here I worked on an alternative to random fourier feature method for generating private 
+      synthetic data using kernel mean embeddings. This alternative provably needs
+      less amount of features to find a valid representation of the data, which means
+      we need less noise to protect the privacy of individuals. Therefore, the quality of the
+      generated private data is improved.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Researcher at Multimedia Lab."
+      subtitle="From 2016 to 2019 at Sharif University of Technology"
+    >
+      Here I was conducting research on the intersection of information theory and signal processing.
+      I devised an probabilistic generalization of sparsity that gives similar guarantees as sparsity in
+      compressed sensing problems.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Software Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>PyTorch</li>
+    <li>C++ </li>
+    <li>MATLAB</li>
+  </ul>
+</BaseLayout>
