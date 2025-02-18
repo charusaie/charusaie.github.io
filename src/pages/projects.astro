@@ -13,8 +13,27 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     desc="This paper introduces a unifying framework for constrained optimization problems, mainly for classification and learn-to-defer tasks. This is a generalization of Neyman-Pearson lemma and counters the regularization paradigm."
     url="https://arxiv.org/abs/2407.12710"
   />
+  <style>
+    .glow-button {
+        border: 1.5px solid black;
+        /* padding: 10px; */
+        background: white;
+        color: black;
+        transition: 0.3s;
+    }
+    .glow-button:hover {
+        box-shadow: 0 0 10px black;
+    }
+</style>
   <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/2a5a41a536d3ada8fbf61a9d6fbf18d2-Paper-Conference.pdf" target="_blank">
-    <button>PDF</button>
+    <button class="glow-button"> &nbsp; PDF &nbsp; </button>
+</a>
+</style>
+<a href="https://github.com/AminChrs/PostProcess" target="_blank">
+  <button class="glow-button"> &nbsp; Code &nbsp; </button>
+</a>
+<a href="https://github.com/charusaie/charusaie.github.io/slides/Constrained_L2D.pdf" target="_blank">
+  <button class="glow-button"> &nbsp; Slides &nbsp; </button>
 </a>
   <div class="divider my-0"></div>
   <HorizontalCard
